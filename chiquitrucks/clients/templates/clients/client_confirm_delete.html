@@ -1,0 +1,26 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+
+<div class='flag'></div>
+<div class="header yellow-header">
+        <h1>Eliminar Cliente</h1>
+</div>
+
+
+
+<div class='button-row'>
+    <a href="{% url 'clients:client_list' %}"><button class="btn-std btn-blue">Regresar</button></a>
+</div>
+
+<div class="content cont-yellow">
+        <form class='delete-form' method="post">
+            {% csrf_token %}
+            {% comment %} <h2>Venta #:{{sale.pk}}</h2> {% endcomment %}
+            <p>Seguro que quieres eliminar: <br> 
+                Cliente: {{client.first_name}} {{client.last_name}}</p>
+            <input type="submit" class="btn-std btn-red" value="Borrar">
+        </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,44 @@
+{% extends 'mainapp/base.html' %}
+
+
+{% block content %}
+            <div class='flag'></div>
+            <div class="header yellow-header">
+                <h1>Lista de Clientes</h1>
+            </div>
+            
+            <div class='button-row'>
+                <a href="{% url 'sales:sales_list' %}"><button class="btn-std btn-red">Ventas</button></a>
+                <a href="{% url 'sales:payment_methods' %}"><button class="btn-std btn-green">Metodos de Pago</button></a>
+                <a href="{% url 'clients:client_new' %}"><button class="btn-std btn-yellow">Nuevo Cliente</button></a>
+             </div>
+            <div class="content">
+                <table class='main-table'>
+                    <thead>
+                        <th>#</th>
+                        <th>C.I</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th><i class='fa fa-pen icon-head fa-1x'></i></th>
+                        <th><i class='fa fa-trash icon-head fa-1x'></th>
+                    </thead>
+                    {% for client in client_list %}
+                    <tr>
+                        <td>{{client.pk}}</td>
+                        <td>{{client.personal_id}}</td>
+                        <td>{{client.first_name}}</td>
+                        <td>{{client.last_name}}</td>
+                        <td>{{client.email}}</td>
+                        <td><a class='link' href="{% url 'clients:client_edit' pk=client.pk %}">
+                                <i class='fa fa-pen fa-1x'></i></a>
+                        </td>
+                        <td><a class='link' href="{% url 'clients:client_remove' pk=client.pk %}">
+                                <i class='fa fa-trash fa-1x'></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+{% endblock content %}

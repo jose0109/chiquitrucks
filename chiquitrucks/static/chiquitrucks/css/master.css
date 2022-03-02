@@ -1,0 +1,462 @@
+
+:root{
+    --main_blue: #0d47a1;
+    --main_light_blue:#4285F4;
+    --main_red:#CC0000;
+    --main_light_red:#ff4444;
+    --main_yellow:#FFD447;
+    --main_light_yellow:#ffbb33;
+    --main_green:#007E33;
+    --main_light_green:#00c851;
+    --main_gray:rgba(0, 0, 0, 0.1);
+    font-family: 'Ubuntu', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align:center;
+}
+
+html{
+    font-size: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* Compensating for fixed navbar height  */
+    /* scroll-padding-top: 8rem; */
+    /* background-color: var(--main-bg-color);  */
+}
+a{
+    color:black;
+    text-decoration:none;
+}
+li {
+    list-style: none;
+}
+
+.navbar-brand img {
+    height: 50px;
+    float: left;
+    margin-right: 7px;
+}
+
+.nav-link{
+    font-size: 1.5rem;
+}
+
+.header{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:100%;
+    margin:0rem;
+    padding:2rem;
+}
+.red-header{
+    background-color: var(--main_red);
+    color:white;
+}
+.green-header{
+    background-color:var(--main_green);
+    color:white;
+}
+.yellow-header{
+    background-color:var(--main_yellow);
+    color:white;
+}
+
+.flag{
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    /* margin-top: 8rem; */
+    height: 38px;
+    background: repeating-conic-gradient(#000000 0% 25%, rgb(255, 255, 255) 0% 50%) 
+        50% / 20px 20px;
+    margin-bottom: 0rem;
+    /* z-index: 2; */
+}
+
+h1{
+    font-size:3rem;
+    text-align:center;
+}
+.button-row{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    margin:2rem;
+    font-size:2rem;
+}
+
+.btn-std{
+    margin: 0rem 0.5rem;
+    padding:0.25rem 1rem;
+    font-size:1.75rem;
+    border-radius:5px;
+    background-color:transparent;
+}
+
+.btn-green{
+    border: 1px solid var(--main_green);
+    color: var(--main_green);
+}
+
+.btn-green:hover{
+    background-color: var(--main_green);
+    color: white;
+}
+
+.btn-yellow{
+    color: var(--main_yellow);
+    border: 1px solid var(--main_yellow);
+}
+
+.btn-yellow:hover{
+    background-color: var(--main_yellow);
+    color: white;
+}
+
+.btn-blue{
+    border: 1px solid var(--main_blue);
+    color: var(--main_blue);
+}
+.btn-blue:hover{
+    background-color: var(--main_blue);
+    color:white;
+}
+
+.btn-red{
+    border: 1px solid var(--main_red);
+    color: var(--main_red);
+}
+.btn-red:hover{
+    background-color: var(--main_red);
+    color:white;
+}
+
+.content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    font-size:1.5rem;
+    width: 50vw;
+    margin:2rem auto;
+    padding:0rem;
+    border-radius:5px;
+}
+.cont-yellow{
+    background-color:var(--main_yellow);
+    border:2px solid var(--main_yellow);
+}
+.cont-gray{
+    background-color:var(--main_gray);
+    /* border:2px solid var(--main_gray); */
+}
+
+th {
+    height: 40px;
+    border-bottom: 1.5px solid black;
+}
+.thfoot {
+    height: 40px;
+    font-weight:600;
+    border-top: 1.5px solid black;
+}
+td{
+    min-width:25px;
+    height: 20px;
+}
+.fa{
+    color:black;
+    margin: 0rem 0.25rem
+}
+.icon-head{
+    color:black;
+}
+.fa-trash:hover{
+    color:red;
+}
+.fa-pen:hover{
+    color:var(--main_blue);
+}
+.icon-head:hover{
+    color:black;
+}
+
+form{
+    margin: 2rem 2rem;
+}
+form p{
+    margin: 2rem;
+    text-align:left;
+}
+
+#id_amount{
+    height:2rem;
+    width:8rem;
+    border-radius:5px;
+    border: 1px solid black;
+}
+.delete-form p{
+    font-size:2rem;
+    font-weight:500;
+    text-align:center;
+}
+
+@media (max-width:700px){
+    .content{
+        width: 90vw;
+    }
+}
+/* Landing Page */
+
+/* Container */
+
+.container{
+    margin: 1rem 6rem;
+    font-size: 2rem;
+}
+
+/* Hero */
+
+.hero{
+    background-color: rgba(255, 238, 0, 0.925);
+
+    margin-bottom: 4rem;
+    padding:4rem;
+    border-radius: 0px;
+    font-size: 2rem;
+}
+
+.section-title{
+    font-size: 4rem;
+}
+/* Features */
+
+#call-features h2{
+    margin:2rem;
+}
+
+#features{
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-gap:10px;
+    font-size: 1.75rem;
+    margin: 0rem auto 4rem auto;
+    padding:2rem;
+
+}
+
+#features div{
+    align-self: center;
+}
+
+/* Experience */
+
+#experience{
+    margin-bottom: 4rem;
+}
+
+
+/* Offers parent div */
+#allofers{
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 300px;
+}
+/* Offer packages structure*/
+.offer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 200px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.offer-title{
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.offer ul{
+    padding-top: 3rem;
+    font-size: 1.5rem;
+}
+.price{
+    font-size: 2rem;
+}
+.offer-select{
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+.offer-select button{
+    padding:1rem 2rem;
+    border-radius: 10px;
+
+}
+/* Colors */
+.bronze{
+    border: 2px solid #A77044;
+    background-color:#A77044;
+}
+.bronze-border{
+    border: 2px solid #A77044;
+}
+
+.silver{
+    border: 2px solid silver;
+    background-color:silver;
+}
+.silver-border{
+    border: 2px solid silver;
+}
+
+.gold{
+    border: 2px solid gold;
+    background-color:gold;
+}
+.gold-border{
+    border: 2px solid gold;
+}
+/* Icons */
+
+i{
+    color: green;
+}
+
+.fa-star{
+    color: tomato;
+    position: absolute;
+    margin: -20px 20px;
+    align-self: flex-end;
+    background: transparent;
+}
+
+i::before{
+background:transparent;
+}       
+
+/* Form */
+
+.div-form{
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    background-color: rgba(238, 32, 32, 0.842);
+    border-radius: 6px;
+    padding:2rem;
+}
+
+input{
+    margin:0.5rem;
+    border:1px solid #DBDBDB;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+input:hover{
+    scale: 1.1;
+}
+
+#name, #email, #phone{
+    height:30px;
+}
+
+#submit{
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    background-color: rgb(255, 255, 255);;
+    border:1px solid rgba(238, 32, 32, 0.842);
+    border-radius: 3px;
+    width: 100px;
+    height: 40px;
+}
+
+#submit:hover{
+    scale: 1.1;
+    color: #232020;
+    background-color: rgba(255, 238, 0, 0.925);
+    /* border: 1px solid rgba(27, 172, 75, 0.918); */
+}
+
+.container{
+    border-radius: 0px;
+}
+.div-form{
+font-size: 1.75rem;
+margin: auto;
+margin-top: 0rem;
+background-color: rgba(238, 32, 32, 0.842);
+padding:2rem;
+}
+
+.fa-star{
+    display: none;
+}
+
+/* Animations */
+
+button:hover{
+    color: white;
+    scale: 1.1;
+}
+/* Viweport size config */
+@media (max-width: 700px){
+
+    #experience{
+        align-items: center;
+    }
+    iframe{
+        width: 80%;
+    }
+
+    #allofers{
+    margin: 4rem auto 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 900px;
+    margin-bottom: 2rem;
+    }
+
+    .offer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    }
+
+}
+
+@media (min-width: 700px){
+    .container{
+        width: 50%;
+        margin: 0rem auto 4rem auto;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1000px){
+    .container{
+        width: 50%;
+        margin: 0rem auto 4rem auto;
+        margin-bottom: 1rem;
+    }
+}
+
+/* .header{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:100%;
+    margin:2rem;
+    padding:2rem;
+} */

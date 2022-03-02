@@ -1,0 +1,25 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+
+<div class='flag'></div>
+<div class="header green-header">
+        <h1>Eliminar Metodo de Pago</h1>
+</div>
+
+
+
+<div class='button-row'>
+    <a href="{% url 'sales:payment_methods' %}"><button class="btn-std btn-blue">Regresar</button></a>
+</div>
+
+<div class="content cont-yellow">
+        <form class='delete-form' method="post">
+            {% csrf_token %}
+            <p>Seguro que quieres eliminar: <br> 
+                Metodo de Pago:{{paymentmethod.name}}<br>Moneda:{{paymentmethod.currency}}</p>
+            <input type="submit" class="btn-std btn-red" value="Borrar">
+        </form>
+</div>
+
+{% endblock content %}

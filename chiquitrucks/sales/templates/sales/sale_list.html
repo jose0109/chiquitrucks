@@ -1,0 +1,55 @@
+{% extends 'mainapp/base.html' %}
+
+
+{% block content %}
+            <div class='flag'></div>
+            <div class="header red-header">
+                <h1>Registro de Ventas</h1>
+            </div>
+            
+            <div class='button-row'>
+                <a href="{% url 'clients:client_list' %}"><button class="btn-std btn-yellow">Clientes</button></a>
+                <a href="{% url 'sales:payment_methods' %}"><button class="btn-std btn-green">Metodos de Pago</button></a>
+                <a href="{% url 'sales:sale_new' %}"><button class="btn-std btn-red">Nueva Venta</button></a>
+             </div>
+            <div class="content cont-gray">
+                <table class='main-table'>
+                    <thead>
+                        <th>#</th>
+                        <th>Hora</th>
+                        <th>Cliente</th>
+                        <th>Monto</th>
+                        <th>Forma de Pago</th>
+                        <th><i class='fa fa-pen icon-head fa-1x'></i></th>
+                        <th><i class='fa fa-trash icon-head fa-1x'></th>
+                    </thead>
+                    {% for sale in sale_list %}
+                    <tr>
+                        <td>{{sale.pk}}</td>
+                        <td>{{sale.created|time:"h:i A"}}</td>
+                        <td>{{sale.client}}</td>
+                        <td>{{sale.amount}}</td>
+                        <td>{{sale.payment_method}}</td>
+                        <td><a class='link' href="{% url 'sales:sale_edit' pk=sale.pk %}">
+                                <i class='fa fa-pen fa-1x'></i></a>
+                        </td>
+                        <td><a class='link' href="{% url 'sales:sale_remove' pk=sale.pk %}">
+                                <i class='fa fa-trash fa-1x'></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tfoot>
+                        <tr>
+                            <td class='thfoot'></td>
+                            <td class='thfoot'></td>
+                            <td class='thfoot'>Totales</td>
+                            <td class='thfoot'>SUM</td>
+                            <td class='thfoot'></td>
+                            <td class='thfoot'></td>
+                            <td class='thfoot'></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+{% endblock content %}

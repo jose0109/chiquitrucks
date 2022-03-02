@@ -1,0 +1,93 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+    <div class='flag'></div>
+
+    <div class="hero" id='call-about'>
+        <h2 class='section-title'>Sobre nosotros</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur incidunt mollitia est expedita! Eaque dicta sint maiores tempora. Culpa amet vitae non, dolorum repellat optio quaerat magnam placeat aliquid ducimus officia molestiae temporibus praesentium accusantium sit aliquam error labore quos pariatur. Praesentium voluptates numquam corporis consequatur, blanditiis porro! Laudantium, nam?</p>
+    </div>
+    
+    <div id='call-features'>
+        <h2 class='section-title'>Caracteristicas</h2>
+        <div class='container' id='features'>    
+            <!-- Spinning classes fa-spin fa-pulse -->
+            <div class='icon'><i class='fa fa-car fa-3x '></i></div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sed laudantium perferendis, quisquam earum voluptas.</div>
+            <div class='icon'><i class='fa fa-gamepad fa-3x '></i></div>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, quasi numquam. Commodi dolorem inventore consectetur.</div>
+            <div class='icon'><i class='fa fa-music fa-3x '></i></div>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A repudiandae eaque ducimus maxime ut exercitationem!</div>
+            <div class='icon'><i class='fa fa-battery-full fa-3x '></i></div>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A repudiandae eaque ducimus maxime ut exercitationem!</div>
+            <div class='icon'><i class='fa fa-flag-checkered fa-3x '></i></div>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A repudiandae eaque ducimus maxime ut exercitationem!</div>
+        </div>
+    </div>    
+
+    <div id='experience'>
+        <h2 class='section-title'>Experiencia Chiquitrucks</h2><br><br>
+        <iframe id='video' width="560" height="315" src="https://www.youtube.com/embed/eF6hNmvKTQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <h2 class='section-title' id='call-allofers'>Promociones</h2>
+    <div id='allofers'>
+        <div class='offer bronze-border'>
+            <div class='offer-title bronze'>BASIC</div>
+            <ul>
+                <li>3 Carritos</li>
+                <li>3 Horas</li>
+                <li>Recreadores</li>
+                <li>Transporte*</li>
+                <br>
+                <li class='price'><strong>140$</strong></li>
+            </ul>
+           <div class='offer-select'>
+               <button class='bronze' type="submit">Select</button>
+           </div>
+        </div>
+        <div class='offer silver-border'>
+            <div class='offer-title silver'>MEDIUM</div>
+            <ul>
+                <li>3 Carritos</li>
+                <li>4 Horas</li>
+                <li>Recreadores</li>
+                <li>Transporte*</li>
+                <br>
+                <li class='price'><strong>175$</strong></li>
+            </ul>
+           <div class='offer-select'>
+               <button class='silver' type="submit">Select</button>
+           </div>
+        </div>
+        <div class='offer gold-border'>
+            <i class='fa fa-star fa-spin fa-5x'></i>
+            <div class='offer-title gold'>PREMIUM</div>
+            <ul>
+                <li>4 Carritos</li>
+                <li>4 Horas</li>
+                <li>Recreadores</li>
+                <li>Transporte*</li>
+                <br>
+                <li class='price'><strong>200$</strong></li>
+            </ul>
+           <div class='offer-select'>
+               <button class='gold' type="submit">Select</button>
+           </div>
+        </div>
+    </div>
+    <h2 class='section-title'>Contacto</h2><br><br>
+    <div class='container div-form'>
+        <form id='form' action="https://www.freecodecamp.com/email-submit">
+            <p>Si quieres estar al dia de nuestras promociones, dejanos tus datos y te agregaremos a nuestra lista de difusión</p><br>
+            <label for="name" id="name-label">Nombre</label><br>
+            <input type="text" name='name' id='name' placeholder='Name' required><br>
+            <label for="email" id="email-label">E-mail Address</label><br>
+            <input type="email" name="email" id="email" placeholder="E-mail" required><br>
+            <label for="phone">Numero de telefono:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder='Phone' pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" required><br>
+            <button type="submit" id='submit'>Submit</button>
+        </form>
+    </div>
+
+{% endblock content %}
